@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentPage implements OnInit {
 
+  eventState = 'Content';
+
+  scrollCounter = 0;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  logScrollStart() {
+    this.scrollCounter += 1;
+  }
+
+  logScrolling($event) {
+    this.eventState = 'Scrolling...';
+  }
+
+  logScrollEnd() {
+    this.eventState = 'Scroll has ended';
+  }
 }

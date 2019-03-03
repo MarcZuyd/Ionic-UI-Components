@@ -1,9 +1,44 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>slides</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Slides
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-card color="light">
 
+    <ion-card-header>
+      <ion-card-title><h1>ion-slides</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        The Slides component is a multi-section container. Each section can be swiped or dragged between. 
+        It contains any number of Slide components.
+        
+        Adopted from Swiper.js: The most modern mobile touch slider and framework with hardware accelerated transitions.
+        
+        http://www.idangero.us/swiper/
+        
+        Copyright 2016, Vladimir Kharlampidi The iDangero.us http://www.idangero.us/
+        
+        Licensed under MIT
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-img src="https://ionicframework.com/img/ionic-meta.jpg"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="https://codenote.net/wp-content/uploads/ionic-Framework.png"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src="https://ionicframework.com/img/meta/ionic-framework-og.png"></ion-img>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

@@ -1,9 +1,56 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>infinite-scroll</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Infinite Scroll
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title><h1>ion-infinite-scroll </h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content >
+      <p>The Infinite Scroll component calls an action to be performed when the user scrolls a specified distance from the bottom or top of the page.
+
+          The expression assigned to the ionInfinite event is called when the user reaches that defined distance. When this expression has finished any and all tasks, it should call the complete() method on the infinite scroll instance.</p>
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-title>Infinite Scroll Content</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>The ion-infinite-scroll component has the infinite scroll logic. It requires a child component in order to display content. Ionic uses its ion-infinite-scroll-content component by default. This component displays the infinite scroll and changes the look depending on the infinite scroll's state. It displays a spinner that looks best based on the platform the user is on. However, the default spinner can be changed and text can be added by setting properties on the ion-infinite-scroll-content component.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light" *ngFor="let i of items">
+    <ion-item>
+      <ion-icon color="primary" name="pin" slot="start"></ion-icon>
+      <ion-label>Destination {{i}}</ion-label>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+  
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-infinite-scroll threshold="30px" (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+
+
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
+  

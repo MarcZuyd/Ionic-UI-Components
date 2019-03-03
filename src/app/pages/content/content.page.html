@@ -1,9 +1,36 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>content</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{ eventState }}
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content
+  [scrollEvents]="true"
+  (ionScrollStart)="logScrollStart()"
+  (ionScroll)="logScrolling($event)"
+  (ionScrollEnd)="logScrollEnd()">
 
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-subtitle>Scroll to see scroll event state</ion-card-subtitle>
+      <ion-card-subtitle>{{ scrollCounter }} scroll actions</ion-card-subtitle>
+      <ion-card-title><h1>ion-content</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+          Content component provides an easy to use content area with some useful 
+          methods to control the scrollable area. There should only be one content 
+          in a single view component.
+      </p>
+
+      <ion-img src="../assets/images/flower.jpeg"></ion-img>
+
+    </ion-card-content>
+
+  </ion-card>
 </ion-content>

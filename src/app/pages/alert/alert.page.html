@@ -1,9 +1,58 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>alert</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Alert
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title><h1>ion-alert</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+          An Alert is a dialog that presents users with information or collects information from the user using inputs. 
+          An alert appears on top of the app's content, and must be manually dismissed by the user before they 
+          can resume interaction with the app. It can also optionally have a header, subHeader and message.
+      </p>
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-title>Creating</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+          Alerts can be created using an Alert Controller. They can be customized by passing alert options in the alert 
+          controller's create method.
+      </p>
+    </ion-card-content>
+    <ion-card-header>
+      <ion-card-title>Buttons</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+          A button's role property can either be destructive or cancel. Buttons without a role property will have the 
+          default look for the platform. Buttons with the cancel role will always load as the bottom button, no matter 
+          where they are in the array. All other buttons will be displayed in the order they have been added to the buttons 
+          array. Note: We recommend that destructive buttons are always the first button in the array, making them the top 
+          button. Additionally, if the action sheet is dismissed by tapping the backdrop, then it will fire the handler 
+          from the button with the cancel role.
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+  
+  <ion-button size="large" (click)="presentAlert()" expand="block">Alert</ion-button>
+  <ion-button size="large" (click)="presentAlertMultipleButtons()" expand="block">Alert Multiple Buttons</ion-button>
+  <ion-button size="large" (click)="presentAlertConfirm()" expand="block">Alert Confirm</ion-button>
+  <ion-button size="large" (click)="presentAlertPrompt()" expand="block">Alert Prompt</ion-button>
+  <ion-button size="large" (click)="presentAlertRadio()" expand="block">Alert Radio</ion-button>
+  <ion-button size="large" (click)="presentAlertCheckbox()" expand="block">Alert Checkbox</ion-button>
 
 </ion-content>

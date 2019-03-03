@@ -1,9 +1,51 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>tabs</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Tabs
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-card color="light">
 
+    <ion-card-header>
+      <ion-card-title><h1>ion-tabs</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Ionic apps are made of high-level building blocks called Components, 
+        which allow you to quickly construct the UI for your app. Ionic comes stock 
+        with a number of components, including cards, lists, and tabs. Once you’re 
+        familiar with the basics, refer to the API Index for a complete list of 
+        each component and sub-component.</p>
+    </ion-card-content>
+    
+  </ion-card>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Schedule</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="speakers">
+        <ion-icon name="contacts"></ion-icon>
+        <ion-label>Speakers</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="map">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Map</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="about">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>About</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>

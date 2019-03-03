@@ -1,9 +1,48 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>modal</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Modal
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-card  color="light" class="welcome-card">
+    <ion-card-header>
+      <ion-card-title><h1>ion-modal </h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>A Modal is a dialog that appears on top of the app's content, and must be dismissed by the 
+        app before interaction can resume. It is useful as a select component when there are a lot of 
+        options to choose from, or when filtering items in a list, as well as many other use cases.</p>
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-title>Creating</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>A Modal is a dialog that appears on top of the app's content, and must be dismissed by the 
+        app before interaction can resume. It is useful as a select component when there are a lot of 
+        options to choose from, or when filtering items in a list, as well as many other use cases.</p>
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-title>Passing parameters</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+          When a modal is created, paramaters might be passed to the newly created modal. Under the hood, 
+          the controller creates a new ion-modal and attaches the specified component to it. It also assigns 
+          the specified componentProps to the component's instance.This way, your component can access the passed 
+          params, check the "Usage" section for further code example for each frameworks.
+
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="full" size="large" color="primary">Show Modal</ion-button>
 
 </ion-content>
+  

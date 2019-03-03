@@ -1,9 +1,60 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>searchbar</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Searchbar
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-card color="light">
+
+    <ion-card-header>
+      <ion-card-title><h1>ion-searchbar</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Searchbars represent a text field that can be used to search through a collection. 
+        They can be displayed inside of a toolbar or the main content.
+        
+        A Searchbar should be used instead of an input to search lists. A clear button is 
+        displayed upon entering input in the searchbar's text field. Clicking on the clear 
+        button will erase the text field and the input will remain focused. A cancel button 
+        can be enabled which will clear the input and lose the focus upon click.
+      </p>
+
+      <!-- Default Searchbar -->
+      <ion-searchbar color="light"></ion-searchbar>
+
+      <!-- Searchbar with danger color -->
+      <ion-searchbar color="medium"></ion-searchbar>
+
+      <!-- Searchbar with value -->
+      <ion-searchbar color="dark" value="Ionic"></ion-searchbar>
+
+      <!-- Searchbar with telephone type -->
+      <ion-searchbar color="primary" type="tel"></ion-searchbar>
+
+      <!-- Searchbar with a cancel button and custom cancel button text -->
+      <ion-searchbar color="secondary" showCancelButton cancelButtonText="Custom Cancel"></ion-searchbar>
+
+      <!-- Searchbar with a custom debounce -->
+      <ion-searchbar color="tertiary" debounce="500"></ion-searchbar>
+
+      <!-- Animated Searchbar -->
+      <ion-searchbar color="danger" animated></ion-searchbar>
+
+      <!-- Searchbar with a placeholder -->
+      <ion-searchbar color="success" placeholder="Filter Schedules"></ion-searchbar>
+
+      <!-- Searchbar in a Toolbar -->
+      <ion-toolbar>
+        <ion-searchbar></ion-searchbar>
+      </ion-toolbar>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

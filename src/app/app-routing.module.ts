@@ -11,10 +11,6 @@ const routes: Routes = [
     path: 'home',
     loadChildren: './pages/home/home.module#HomePageModule'
   },
-  {
-    path: 'list',
-    loadChildren: './pages/list/list.module#ListPageModule'
-  },
   { path: 'action-sheet', loadChildren: './pages/action-sheet/action-sheet.module#ActionSheetPageModule' },
   { path: 'alert', loadChildren: './pages/alert/alert.module#AlertPageModule' },
   { path: 'badge', loadChildren: './pages/badge/badge.module#BadgePageModule' },
@@ -24,12 +20,14 @@ const routes: Routes = [
   { path: 'chip', loadChildren: './pages/chip/chip.module#ChipPageModule' },
   { path: 'content', loadChildren: './pages/content/content.module#ContentPageModule' },
   { path: 'date-time', loadChildren: './pages/date-time/date-time.module#DateTimePageModule' },
+  // tslint:disable-next-line:max-line-length
   { path: 'floating-action-button', loadChildren: './pages/floating-action-button/floating-action-button.module#FloatingActionButtonPageModule' },
   { path: 'grid', loadChildren: './pages/grid/grid.module#GridPageModule' },
   { path: 'infinite-scroll', loadChildren: './pages/infinite-scroll/infinite-scroll.module#InfiniteScrollPageModule' },
   { path: 'icons', loadChildren: './pages/icons/icons.module#IconsPageModule' },
   { path: 'input', loadChildren: './pages/input/input.module#InputPageModule' },
   { path: 'item', loadChildren: './pages/item/item.module#ItemPageModule' },
+  { path: 'list', loadChildren: './pages/list/list.module#ListPageModule'},
   { path: 'media', loadChildren: './pages/media/media.module#MediaPageModule' },
   { path: 'modal', loadChildren: './pages/modal/modal.module#ModalPageModule' },
   { path: 'navigation', loadChildren: './pages/navigation/navigation.module#NavigationPageModule' },
@@ -46,7 +44,8 @@ const routes: Routes = [
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   { path: 'toast', loadChildren: './pages/toast/toast.module#ToastPageModule' },
   { path: 'toggle', loadChildren: './pages/toggle/toggle.module#TogglePageModule' },
-  { path: 'typography', loadChildren: './pages/typography/typography.module#TypographyPageModule' }
+  { path: 'typography', loadChildren: './pages/typography/typography.module#TypographyPageModule' },
+  { path: 'modal-page', loadChildren: './pages/modal/modal-page/modal-page.module#ModalPagePageModule' }
 ];
 
 @NgModule({

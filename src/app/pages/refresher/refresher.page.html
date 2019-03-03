@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>refresher</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{ eventState }}
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-card color="light">
 
+    <ion-card-header>
+      <ion-card-title><h1>ion-refresher</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+      The refresher provides pull-to-refresh functionality on a content component. 
+      The pull-to-refresh pattern lets a user pull down on a list of data using touch in order to retrieve more data.
+
+      Data should be modified during the refresher's output events. 
+      Once the async operation has completed and the refreshing should end, call complete() on the refresher.
+      </p>
+      <ion-refresher color="primary" slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+

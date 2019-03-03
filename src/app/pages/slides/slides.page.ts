@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlidesPage implements OnInit {
 
-  constructor() { }
+  slideOpts = {
+    effect: 'flip',
 
+  };
+  constructor() {}
   ngOnInit() {
   }
 

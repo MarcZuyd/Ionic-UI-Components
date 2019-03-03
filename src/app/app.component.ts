@@ -59,6 +59,22 @@ export class AppComponent {
       url: '/grid'
     },
     {
+      title: 'Infinite Scroll',
+      url: '/infinite-scroll'
+    },
+    {
+      title: 'Input',
+      url: '/input'
+    },
+    {
+      title: 'Item',
+      url: '/item'
+    },
+    {
+      title: 'List',
+      url: '/list'
+    },
+    {
       title: 'Media',
       url: '/media'
     },
@@ -93,7 +109,6 @@ export class AppComponent {
     {
       title: 'Reorder',
       url: '/reorder',
-      icon: 'home'
     },
     {
       title: 'Searchbar',
@@ -108,7 +123,8 @@ export class AppComponent {
       url: '/select'
     },
     {
-      title: 'Slides'
+      title: 'Slides',
+      url: '/slides'
     },
     {
       title: 'Tabs',
@@ -138,7 +154,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+      this.statusBar.backgroundColorByHexString('#006064');
       this.splashScreen.hide();
     });
   }
