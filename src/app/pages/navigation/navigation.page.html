@@ -1,9 +1,13 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>navigation</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+    <h2>My Heroes</h2>
+    <ion-button align-text-start expand="block" *ngFor="let hero of heroes"  routerLink="/navigation/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </ion-button>
+  
 </ion-content>

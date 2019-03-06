@@ -45,7 +45,8 @@ const routes: Routes = [
   { path: 'toast', loadChildren: './pages/toast/toast.module#ToastPageModule' },
   { path: 'toggle', loadChildren: './pages/toggle/toggle.module#TogglePageModule' },
   { path: 'typography', loadChildren: './pages/typography/typography.module#TypographyPageModule' },
-  { path: 'modal-page', loadChildren: './pages/modal/modal-page/modal-page.module#ModalPagePageModule' }
+  { path: 'modal-page', loadChildren: './pages/modal/modal-page/modal-page.module#ModalPagePageModule' },
+  { path: 'navigation/detail/:id', loadChildren: './pages/navigation/detail/detail.module#DetailPageModule' }
 ];
 
 @NgModule({

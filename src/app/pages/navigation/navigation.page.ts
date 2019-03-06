@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HomePage } from '../home/home.page';
+import { HEROES } from './mock-heroes';
 
 @Component({
   selector: 'app-navigation',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.page.scss'],
 })
 export class NavigationPage implements OnInit {
+  heroes = HEROES;
 
   constructor() { }
 
